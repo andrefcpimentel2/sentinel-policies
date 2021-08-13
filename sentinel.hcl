@@ -22,3 +22,7 @@ policy "restrict-ec2-instance-type" {
 policy "validate-providers-from-desired-regions" {
     enforcement_level = "soft-mandatory"
 }
+  
+policy "limit-cost-by-workspace-type" {
+    enforcement_level = "soft-mandatory"
+}
