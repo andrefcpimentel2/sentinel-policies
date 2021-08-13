@@ -1,4 +1,4 @@
- odule "tfplan-functions" {
+module "tfplan-functions" {
   source = "./common-functions/tfplan-functions/tfplan-functions.sentinel"
 }
 
@@ -15,7 +15,7 @@ module "aws-functions" {
 }
 
 
- policy "restrict-ec2-instance-type" {
+policy "restrict-ec2-instance-type" {
    enforcement_level = "soft-mandatory"
 }
 
