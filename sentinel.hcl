@@ -14,15 +14,24 @@ module "aws-functions" {
   source = "./aws-functions/aws-functions.sentinel"
 }
 
-
-policy "restrict-ec2-instance-type" {
-   enforcement_level = "soft-mandatory"
+module "azure-functions" {
+  source = "./azure-functions/azure-functions.sentinel"
 }
 
-policy "validate-providers-from-desired-regions" {
-    enforcement_level = "soft-mandatory"
-}
+
+# policy "restrict-ec2-instance-type" {
+#    enforcement_level = "soft-mandatory"
+# }
+
+# policy "validate-providers-from-desired-regions" {
+#     enforcement_level = "soft-mandatory"
+# }
   
 policy "limit-cost-by-workspace-type" {
     enforcement_level = "soft-mandatory"
 }
+
+policy "restrict-vm-size" {
+    enforcement_level = "soft-mandatory"
+}
+
