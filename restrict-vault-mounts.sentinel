@@ -14,7 +14,7 @@ allMounts = plan.find_resources("vault_mount")
 
 # Filter to mounts with violations
 # Warnings will be printed for all violations since the last parameter is true
-violatingMounts = plan.filter_attribute_in_list(allMounts,
+violatingMounts = plan.filter_attribute_not_in_list(allMounts,
                         "type", allowed_types, true)
 
 # Count violations
