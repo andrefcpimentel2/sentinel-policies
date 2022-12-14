@@ -1,0 +1,26 @@
+# This policy uses the Sentinel tfplan/v2 import to require that
+# all mounts belong to a list
+
+# Import common-functions/tfplan-functions/tfplan-functions.sentinel
+# with alias "plan"
+import "tfplan-functions" as plan
+
+# Allowed mounts
+# Include "null" to allow missing or computed values
+allowed_types = ["kv-v2", "pki", "aws", "azure"]
+
+# Get all mounts
+allMounts = plan.find_resources("vault_mount")
+
+# Filter to mounts with violations
+# Warnings will be printed for all violations since the last parameter is true
+violatingMounts = plan.filter_attribute_in_list(allMounts,
+                        "type", allowed_types, true)
+
+# Count violations
+violations = length(violatingMounts["messages"])
+
+# Main rule
+main = rule {
+  violations is 0
+}
