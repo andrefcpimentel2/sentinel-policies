@@ -39,7 +39,7 @@ limit = decimal.new(300)
 
 
 ##### Rules #####
-cost_validated = limit_cost_by_workspace_type(limits)
+cost_validated = limit_cost_by_workspace_type(limit)
 main = rule {
   cost_validated
 }
