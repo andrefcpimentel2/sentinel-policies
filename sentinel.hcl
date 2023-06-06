@@ -27,7 +27,7 @@ module "azure-functions" {
 #     enforcement_level = "soft-mandatory"
 # }
   
-policy "limit-cost-by-workspace-type" {
+policy "limit-cost-by-budget" {
     enforcement_level = "soft-mandatory"
 }
 
