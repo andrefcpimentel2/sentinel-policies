@@ -30,7 +30,7 @@ policy "restrict-vm-size" {
     enforcement_level = "hard-mandatory"
 }
 
-policy "restrict-inbound-source-address-prefixes" {
+policy "require-all-resources-from-pmr" {
     enforcement_level = "soft-mandatory"
 }
 
