@@ -18,11 +18,6 @@ module "azure-functions" {
   source = "./azure-functions/azure-functions.sentinel"
 }
 
-
-policy "restrict-inbound-source-address-prefixes" {
-   enforcement_level = "soft-mandatory"
-}
-
 policy "enforce-mandatory-tags" {
     enforcement_level = "soft-mandatory"
 }
