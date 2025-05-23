@@ -26,11 +26,11 @@ policy "limit-cost-by-budget" {
        enforcement_level = "soft-mandatory"
 }
 
-policy "restrict-vm-size" {
+policy "restrict-ec2-instance-type" {
     enforcement_level = "hard-mandatory"
 }
 
-policy "require-all-resources-from-pmr" {
+policy "restrict-lambda-runtime" {
     enforcement_level = "soft-mandatory"
 }
 
