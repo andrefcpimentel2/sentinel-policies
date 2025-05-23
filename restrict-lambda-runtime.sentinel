@@ -15,7 +15,7 @@ allLambdaFunctions = plan.find_resources("aws_lambda_function")
 # Filter to allLambdaFunctions with violations
 # Warnings will be printed for all violations since the last parameter is true
 violatingLambdaFunctions= plan.filter_attribute_not_in_list(allLambdaFunctions,
-                        "instance_type", allowed_runtimes, true)
+                        "runtime", allowed_runtimes, true)
 
 # Count violations
 violations = length(violatingLambdaFunctions["messages"])
