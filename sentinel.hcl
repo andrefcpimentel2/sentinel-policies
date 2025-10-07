@@ -18,9 +18,9 @@ module "azure-functions" {
   source = "./azure-functions/azure-functions.sentinel"
 }
 
-policy "enforce-mandatory-tags" {
-    enforcement_level = "advisory"
-}
+# "enforce-mandatory-tags" {
+#    enforcement_level = "advisory"
+#}
   
 policy "limit-cost-by-budget" {
        enforcement_level = "advisory"
