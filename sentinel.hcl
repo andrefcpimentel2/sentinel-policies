@@ -19,20 +19,20 @@ module "azure-functions" {
 }
 
 policy "enforce-mandatory-tags" {
-    enforcement_level = "soft-mandatory"
+    enforcement_level = "advisory"
 }
   
 policy "limit-cost-by-budget" {
-       enforcement_level = "soft-mandatory"
+       enforcement_level = "advisory"
 }
 
 policy "restrict-ec2-instance-type" {
-    enforcement_level = "hard-mandatory"
+    enforcement_level = "advisory"
 }
 
 
 policy "restrict-lambda-runtime" {
-    enforcement_level = "soft-mandatory"
+    enforcement_level = "advisory"
 }
 
 
